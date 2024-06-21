@@ -16,4 +16,8 @@ public class BookService {
         return this.bookRepository.findAll();
     }
 
+    public void create(String title) {
+        Book book = new Book(title);
+        this.bookRepository.save(book);
+    }
 }
