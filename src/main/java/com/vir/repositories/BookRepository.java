@@ -5,9 +5,11 @@ import com.vir.models.Book;
 import java.util.List;
 
 public interface BookRepository {
-    List<Book> findAll();
-
     void save(Book book);
 
+    List<Book> findAll();
 
+    void update(String oldTitle, String newTitle);
+
+    void delete(String title);
 }

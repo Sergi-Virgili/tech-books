@@ -2,7 +2,7 @@ package com.vir;
 
 import com.vir.models.Book;
 import com.vir.repositories.BookRepository;
-import com.vir.repositories.in_memory.InMemoryBookRepository;
+import com.vir.repositories.csv.CSVBookRepository;
 import com.vir.services.BookService;
 
 import java.util.List;
@@ -17,7 +17,7 @@ public class Main {
 
     public static void main(String[] args) {
         // Crear una instancia del repositorio y del servicio de libros
-        BookRepository repository = new InMemoryBookRepository();
+        BookRepository repository = new CSVBookRepository();
         BookService bookService = new BookService(repository);
 
         // Bandera para salir del bucle principal

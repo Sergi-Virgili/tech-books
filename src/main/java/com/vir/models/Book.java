@@ -11,4 +11,7 @@ public class Book {
         return title;
     }
 
+    public void setTitle(String newTitle) {
+        this.title = newTitle;
+    }
 }
